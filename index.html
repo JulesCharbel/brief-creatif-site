@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brief Créatif - J. C. DEGNON design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Optionnel: Ajouter une icône pour l'onglet du navigateur (favicon) -->
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+</head>
+<body>
+    <div class="site-wrapper">
+
+        <!-- === PAGE D'ACCUEIL === -->
+        <div class="page-view active-view" id="welcomePage">
+            <header class="page-header">
+                <!-- <img src="path/to/your/logo_large.png" alt="Logo Studio" class="logo-large"> -->
+                <h1>Bienvenue dans l'Espace <span class="highlight">Brief Créatif</span> de J. C. DEGNON design</h1>
+                <p class="tagline">Votre vision, notre expertise. Ensemble, créons l'exceptionnel.</p>
+            </header>
+            <main class="page-content welcome-content">
+                <p>Ce formulaire interactif a été conçu pour m'aider à comprendre en profondeur vos attentes et vos besoins pour votre projet de design graphique. En répondant avec soin aux questions suivantes, vous me fournissez les clés pour créer une solution visuelle percutante et parfaitement alignée sur vos objectifs.</p>
+                <p>Prêt à donner vie à vos idées ?</p>
+                <button class="btn btn-primary btn-large" id="startFormBtn">Commencer mon Brief</button>
+            </main>
+        </div>
+
+        <!-- === FORMULAIRE DE QUESTIONS === -->
+        <div class="page-view" id="formPage" style="display:none;">
+            <div class="form-container">
+                <header class="form-header">
+                    <h1>Donnons vie à votre <span class="highlight">vision créative</span> !</h1>
+                    <p class="tagline">Répondez à quelques questions pour un design sur mesure.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="step-indicator" id="stepIndicator">Étape 1 sur X</div>
+                </header>
+
+                <main class="form-content">
+                    <!-- Les questions seront insérées ici (identiques à la version précédente) -->
+                    <!-- Étape 1: Nature du Projet -->
+                    <div class="question-page active" data-step="1">
+                        <h2 class="question-title">Pour quel type de <span class="highlight-alt">chef-d'œuvre</span> allons-nous collaborer ?</h2>
+                        <div class="options-container">
+                            <label class="option-item"><input type="radio" name="project_type" value="logo"><span class="option-text">Un Logo emblématique <small>(pour marquer les esprits)</small></span></label>
+                            <label class="option-item"><input type="radio" name="project_type" value="poster"><span class="option-text">Une Affiche percutante <small>(pour un événement, une promotion)</small></span></label>
+                            <label class="option-item"><input type="radio" name="project_type" value="banner_static"><span class="option-text">Une Bannière Web statique <small>(pour attirer le clic)</small></span></label>
+                            <label class="option-item"><input type="radio" name="project_type" value="banner_animated"><span class="option-text">Une Bannière Web animée <small>(pour dynamiser votre message)</small></span></label>
+                            <label class="option-item"><input type="radio" name="project_type" value="visual_identity"><span class="option-text">Une Identité Visuelle complète <small>(logo, charte graphique...)</small></span></label>
+                            <label class="option-item"><input type="radio" name="project_type" value="illustration"><span class="option-text">Une Illustration sur mesure</span></label>
+                            <label class="option-item option-item-other"><input type="radio" name="project_type" value="other_project_type"><span class="option-text">Autre <small>(précisez)</small>:</span><input type="text" name="project_type_other_text" class="other-text-input" placeholder="Votre précision ici..."></label>
+                            <label class="option-item"><input type="radio" name="project_type" value="advice"><span class="option-text">Je ne suis pas sûr(e), conseillez-moi !</span></label>
+                        </div>
+                    </div>
+                    <!-- Étape 2: L'Âme du Projet -->
+                    <div class="question-page" data-step="2">
+                        <h2 class="question-title">Quelle est l'<span class="highlight-alt">âme</span> de votre projet, son objectif principal ?</h2>
+                        <div class="options-container">
+                            <label class="option-item"><input type="checkbox" name="project_goal" value="notoriety"><span class="option-text">Booster ma notoriété / Me faire connaître</span></label>
+                            <label class="option-item"><input type="checkbox" name="project_goal" value="sales"><span class="option-text">Générer des ventes / Attirer de nouveaux clients</span></label>
+                            <label class="option-item"><input type="checkbox" name="project_goal" value="inform"><span class="option-text">Informer / Éduquer mon audience</span></label>
+                            <label class="option-item"><input type="checkbox" name="project_goal" value="launch"><span class="option-text">Lancer un nouveau produit / service avec impact</span></label>
+                            <label class="option-item"><input type="checkbox" name="project_goal" value="modernize"><span class="option-text">Moderniser mon image de marque</span></label>
+                            <label class="option-item"><input type="checkbox" name="project_goal" value="emotion"><span class="option-text">Créer une connexion émotionnelle</span></label>
+                            <label class="option-item"><input type="checkbox" name="project_goal" value="event"><span class="option-text">Annoncer un événement spécial</span></label>
+                            <label class="option-item option-item-other"><input type="checkbox" name="project_goal" value="other_project_goal"><span class="option-text">Autre <small>(précisez)</small>:</span><input type="text" name="project_goal_other_text" class="other-text-input" placeholder="Votre précision ici..."></label>
+                        </div>
+                    </div>
+                    <!-- Étape 3: Public Cible -->
+                    <div class="question-page" data-step="3">
+                        <h2 class="question-title">À qui s'adresse cette <span class="highlight-alt">création</span> ? Décrivez votre audience idéale.</h2>
+                        <div class="options-container">
+                            <label class="option-item"><input type="checkbox" name="target_audience" value="young_adults"><span class="option-text">Jeunes Adultes (18-25 ans)</span></label>
+                            <label class="option-item"><input type="checkbox" name="target_audience" value="active_adults"><span class="option-text">Adultes Actifs (26-45 ans)</span></label>
+                            <label class="option-item"><input type="checkbox" name="target_audience" value="professionals"><span class="option-text">Professionnels / Cadres</span></label>
+                            <label class="option-item"><input type="checkbox" name="target_audience" value="families"><span class="option-text">Familles / Parents</span></label>
+                            <label class="option-item"><input type="checkbox" name="target_audience" value="seniors"><span class="option-text">Seniors / Retraités</span></label>
+                            <label class="option-item"><input type="checkbox" name="target_audience" value="b2b"><span class="option-text">Clients B2B (entreprises)</span></label>
+                            <label class="option-item"><input type="checkbox" name="target_audience" value="b2c"><span class="option-text">Clients B2C (particuliers)</span></label>
+                        </div>
+                        <label class="input-label-block">Quelques mots pour affiner ? <small>(Ex: passionnés de technologie, amateurs d'art...)</small></label>
+                        <textarea name="target_audience_details" rows="3" placeholder="Décrivez plus en détail votre public..."></textarea>
+                    </div>
+                    <!-- Étape 4: Ambiance Visuelle -->
+                    <div class="question-page" data-step="4">
+                        <h2 class="question-title">Quel <span class="highlight-alt">univers graphique</span> vous séduit ou correspond le mieux ?</h2>
+                        <div class="options-container">
+                            <label class="option-item"><input type="checkbox" name="visual_style" value="modern_clean"><span class="option-text">Moderne & Épuré <small>Lignes claires, minimalisme</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="visual_style" value="elegant_sophisticated"><span class="option-text">Élégant & Sophistiqué <small>Raffinement, luxe discret</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="visual_style" value="playful_colorful"><span class="option-text">Ludique & Coloré <small>Joie, dynamisme</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="visual_style" value="vintage_retro"><span class="option-text">Vintage & Rétro <small>Charme d'antan, nostalgie</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="visual_style" value="nature_organic"><span class="option-text">Nature & Organique <small>Douceur, éléments naturels</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="visual_style" value="bold_vibrant"><span class="option-text">Audacieux & Vibrant <small>Couleurs vives, impact fort</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="visual_style" value="tech_futuristic"><span class="option-text">Technologique & Futuriste <small>Innovation, avant-garde</small></span></label>
+                        </div>
+                        <label class="input-label-block">Autre ambiance ou précisions ?</label>
+                        <input type="text" name="visual_style_other" placeholder="Décrivez l'ambiance recherchée...">
+                    </div>
+                    <!-- Étape 5: Palette de Couleurs -->
+                    <div class="question-page" data-step="5">
+                        <h2 class="question-title">Parlons <span class="highlight-alt">couleurs</span> ! Préférences, teintes fétiches ou à proscrire ?</h2>
+                        <div class="options-container">
+                            <label class="option-item"><input type="checkbox" name="colors_preference" value="warm"><span class="option-text">Tons chauds <small>(ex: rouge, orange, jaune)</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="colors_preference" value="cold"><span class="option-text">Tons froids <small>(ex: bleu, vert, violet)</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="colors_preference" value="neutral"><span class="option-text">Tons neutres <small>(ex: gris, beige, blanc, noir)</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="colors_preference" value="pastel"><span class="option-text">Pastels <small>(douceur, délicatesse)</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="colors_preference" value="vibrant_saturated"><span class="option-text">Couleurs vives et saturées <small>(impact)</small></span></label>
+                            <label class="option-item"><input type="checkbox" name="colors_preference" value="no_preference"><span class="option-text">Pas de préférence, je vous fais confiance !</span></label>
+                        </div>
+                        <label class="input-label-block">Couleurs spécifiques souhaitées (ex: #FF0000 ou nom) :</label>
+                        <input type="text" name="colors_specific" placeholder="Entrez les codes hexadécimaux ou noms de couleurs">
+                        <label class="input-label-block">Couleurs à éviter absolument :</label>
+                        <input type="text" name="colors_avoid" placeholder="Listez les couleurs à ne pas utiliser">
+                    </div>
+                    <!-- Étape 6: Les Incontournables (Textes) -->
+                    <div class="question-page" data-step="6">
+                        <h2 class="question-title">Quels <span class="highlight-alt">messages clés</span>, slogans, ou infos doivent figurer ?</h2>
+                        <label class="input-label-block">Listez tous les textes importants (nom d'entreprise, dates, accroches...) :</label>
+                        <textarea name="text_elements" rows="5" placeholder="Chaque mot compte ! Soyez précis."></textarea>
+                    </div>
+                    <!-- Étape 7: Éléments Graphiques Existants -->
+                    <div class="question-page" data-step="7">
+                        <h2 class="question-title">Avez-vous des <span class="highlight-alt">éléments graphiques</span> (logo, photos) à intégrer ?</h2>
+                        <div class="options-container">
+                            <label class="option-item"><input type="radio" name="existing_elements" value="logo_only"><span class="option-text">Oui, je fournirai mon logo.</span></label>
+                            <label class="option-item"><input type="radio" name="existing_elements" value="images_only"><span class="option-text">Oui, je fournirai des photos/illustrations.</span></label>
+                            <label class="option-item"><input type="radio" name="existing_elements" value="logo_and_images"><span class="option-text">Oui, logo ET photos/illustrations.</span></label>
+                            <label class="option-item"><input type="radio" name="existing_elements" value="creative_freedom"><span class="option-text">Non, je compte sur votre créativité pour les visuels.</span></label>
+                            <label class="option-item"><input type="radio" name="existing_elements" value="not_applicable"><span class="option-text">Non, ce n'est pas pertinent pour ce projet (ex: création de logo).</span></label>
+                        </div>
+                        <p class="info-text">Si oui, vous pourrez me les envoyer par email après avoir soumis ce formulaire.</p>
+                    </div>
+                    <!-- Étape 8: Inspirations & Contre-Exemples -->
+                    <div class="question-page" data-step="8">
+                        <h2 class="question-title"><span class="highlight-alt">Inspirations</span> ou contre-exemples ? Partagez des liens !</h2>
+                        <label class="input-label-block">Lien d'inspiration N°1 (design que vous aimez) :</label>
+                        <input type="url" name="inspiration_link_1" placeholder="https://exemple.com/design-aime">
+                        <label class="input-label-block">Lien d'inspiration N°2 :</label>
+                        <input type="url" name="inspiration_link_2" placeholder="https://autre-exemple.com">
+                        <label class="input-label-block">Lien d'un contre-exemple (design que vous n'aimez pas) :</label>
+                        <input type="url" name="anti_inspiration_link" placeholder="https://exemple.com/design-deteste">
+                        <label class="input-label-block">Brèves explications (facultatif) :</label>
+                        <textarea name="inspiration_details" rows="3" placeholder="Qu'est-ce qui vous plaît ou déplaît dans ces exemples ?"></textarea>
+                    </div>
+                    <!-- Étape 9: Spécificités Techniques -->
+                    <div class="question-page" data-step="9">
+                        <h2 class="question-title">Quelles sont les <span class="highlight-alt">spécifications techniques</span> finales ?</h2>
+                        <label class="input-label-block">Formats, dimensions, supports d'impression ou plateformes de diffusion :</label>
+                        <textarea name="technical_specs" rows="4" placeholder="Ex: Affiche A3 (29.7x42cm) pour impression, Bannière Facebook 1200x628px, Logo vectoriel (.AI, .SVG) et .PNG transparent..."></textarea>
+                    </div>
+                    <!-- Étape 10: Coordonnées & Derniers Détails -->
+                    <div class="question-page" data-step="10">
+                        <h2 class="question-title">Presque <span class="highlight-alt">terminé</span> ! Comment puis-je vous recontacter ?</h2>
+                        
+                        <label class="input-label-block">Nom complet <span class="required-asterisk">*</span></label>
+                        <input type="text" name="contact_name" placeholder="Votre nom et prénom" required>
+
+                        <label class="input-label-block">Adresse email <span class="required-asterisk">*</span></label>
+                        <input type="email" name="contact_email" id="contactEmailInput" placeholder="votre.email@exemple.com" required>
+                        <span class="error-message" id="emailErrorMessage"></span> <!-- 👇 NOUVEL ÉLÉMENT ICI 👇 -->
+
+                        <label class="input-label-block">Numéro de téléphone (facultatif)</label>
+                        <input type="tel" name="contact_phone" placeholder="06 12 34 56 78">
+
+                        <label class="input-label-block">Entreprise / Organisation (facultatif)</label>
+                        <input type="text" name="contact_company" placeholder="Nom de votre société">
+
+                        <label class="input-label-block">Avez-vous autre chose à ajouter ? <small>(Idée de budget, délai impératif...)</small></label>
+                        <textarea name="additional_info" rows="4" placeholder="Toute information supplémentaire est la bienvenue !"></textarea>
+                    </div>
+                </main>
+
+                <footer class="form-navigation">
+                    <button class="btn btn-secondary" id="prevBtn" disabled>Précédent</button>
+                    <button class="btn btn-primary" id="nextBtn">Suivant</button>
+                    <button class="btn btn-primary" id="viewRecapBtn" style="display:none;">Voir le récapitulatif</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- === PAGE DE RÉCAPITULATIF ET ENVOI === -->
+        <div class="page-view" id="recapPage" style="display:none;">
+            <div class="recap-container">
+                <div class="recap-actions-top">
+                    <button class="btn btn-secondary btn-edit-recap" id="editRecapBtnTop">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M13.943 3.057a2.594 2.594 0 0 0-3.633-.03L3.057 10.28a2.567 2.567 0 0 0-.758 1.81v4.584C2.299 17.615 3.02 18.5 4.04 18.5h4.583c.69 0 1.342-.273 1.81-.758L17.69 10.49a2.538 2.538 0 0 0 .03-3.633L13.943 3.057zm-1.417.707a1.094 1.094 0 0 1 1.542.012l3.717 3.717a1.038 1.038 0 0 1-.013 1.542L10.513 16.3a1.067 1.067 0 0 1-.75.313H5.54c-.298 0-.54-.242-.54-.54v-4.222c0-.29.114-.56.313-.75l7.257-7.257zM19.5 21.75H4.5a.75.75 0 0 1 0-1.5h15a.75.75 0 0 1 0 1.5z"/></svg>
+                        Modifier mes réponses
+                    </button>
+                </div>
+                <header class="page-header recap-header">
+                    <h1>Votre <span class="highlight">Brief Créatif</span></h1>
+                    <p class="tagline" id="recapTagline">Veuillez vérifier attentivement vos informations avant l'envoi.</p>
+                </header>
+
+                <div class="sending-status" id="sendingStatus" style="display:none;">
+                    <div class="spinner"></div>
+                    <p id="sendingStatusText">Envoi de votre brief en cours...</p>
+                </div>
+
+                <main class="page-content recap-content" id="recapContent">
+                    <!-- Le contenu du récapitulatif sera injecté ici par JavaScript -->
+                </main>
+
+                <footer class="recap-navigation" id="recapNavigationFooter">
+                    <button class="btn btn-primary btn-large" id="sendRecapBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/></svg>
+                        Envoyer mon brief
+                    </button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- === FOOTER PERMANENT DU SITE === -->
+        <footer class="site-footer" id="siteFooter">
+            <p>© <span id="currentYear"></span> J. C. DEGNON design. Tous droits réservés.</p>
+            <p>charbeldegnon@gmail.com | +229 01 69 00 24 59 </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
