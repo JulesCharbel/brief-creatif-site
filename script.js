@@ -139,12 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
        // console.log('Form Data Updated:', formData);
     }
 
-
-    // --- VALIDATION (identique, vérifier les sélecteurs si besoin) ---
-// Dans script.js
-
-// ... (Début de votre script.js, sélecteurs, etc.) ...
-
     // --- VALIDATION ---
     function validateCurrentStep() {
         if (currentStep >= totalSteps || currentStep < 0) return true;
@@ -201,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         isValid = false;
                         field.classList.add('invalid');
                         if (emailErrorSpan) {
-                            emailErrorSpan.textContent = 'Veuillez entrer une adresse e-mail valide (ex: nom@domaine.com).';
+                            emailErrorSpan.textContent = 'Veuillez entrer une adresse e-mail valide (ex: charbeldegnon@gmail.com).';
                         }
                         if (!firstInvalidField) firstInvalidField = field;
                     } else {
@@ -391,7 +385,7 @@ if (sendRecapBtn) {
         const spinnerElement = sendingStatusDiv.querySelector('.spinner');
         if (spinnerElement) spinnerElement.style.display = 'block'; // S'assurer qu'il est visible au début de l'envoi
 
-        const formspreeEndpoint = 'https://formspree.io/f/xovwakov'; // REMPLACEZ CECI
+        const formspreeEndpoint = 'https://formspree.io/f/xovwakov';
 
         fetch(formspreeEndpoint, {
             method: 'POST',
